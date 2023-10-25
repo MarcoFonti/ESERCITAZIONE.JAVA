@@ -1,8 +1,11 @@
-//Crea una funzione chiamata adultFilter e che restituisca solo le persone maggiorenni.
+//Crea una funzione chiamata nicknameMap
+//Restituisca un array di soprannomi. 
+//Il nickname dovrebbe essere composto in questo modo: <nome>-<età>.
 
 
-function adultFilter(persons) {
-  return persons.filter(person => person.age >= 18);
+function nicknameMap(persons) {
+  return persons.map (function(person){
+    return person.name + "- " + person.age ;});
 }
 
 const persons = [
@@ -18,6 +21,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const adults = adultFilter(persons);
+const nicknames = nicknameMap(persons);
 console.log(persons);
-console.log(adults);
+console.log(nicknames);
