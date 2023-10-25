@@ -4,12 +4,14 @@
 //Stampa "Hello John"Nella console
 
 function printName () {
-    let helloName = "hello john";
+    let helloName = "Hello John";
+  
     function inner () {
-        console.log (helloName);
+      console.log(helloName);
     }
+  
+    setTimeout(inner, 1000); // Stampo "Hello John" dopo 1 secondo
 
-    return inner;
-}
-
-let innerHello = printName (); innerHello();
+  }
+  
+  printName ();
